@@ -16,12 +16,16 @@ class SoundService {
             print("Could not find sound file for key: \(key)")
             return
         }
+        
+        let queue = DispatchQueue(label: "", qos: .userInteractive)
 
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            audioPlayer?.play()
-        } catch let error {
-            print("Error loading audio for key \(key): \(error.localizedDescription)")
+        queue.async {
+            do {
+                self.audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                self.audioPlayer?.play()
+            } catch let error {
+                print("Error loading audio for key \(key): \(error.localizedDescription)")
+            }
         }
     }
 }
