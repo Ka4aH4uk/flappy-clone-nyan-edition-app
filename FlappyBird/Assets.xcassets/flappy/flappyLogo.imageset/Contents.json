@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "pinpng.com-flappy-bird-pipes-png-4772049.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
